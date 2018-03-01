@@ -2,9 +2,67 @@ img {
 	position: relative;
     float: left;
     width:  100px;
-    height: 250px;
+    height: 300px;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
     border-radius: 5%
+}
+
+nav {
+                width: 100%;
+                height: 40px;
+                background: linear-gradient(to right, #56ab2f, #a8e063);
+                border-radius: 6px !important;
+                -moz-border-radius: 6px !important;
+            }
+
+        .nav a{
+            color: white !important;
+            font-size: 1em !important;
+        }
+
+p { 
+  font-size: 1.4em;
+}   
+
+h2 {
+    font-family: lobester;
+    font-style: italic;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+#result {
+    font-size: 15px;
+}
+
+#b1{
+    height:60px; 
+    width:120px; 
+    margin: -30px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}
+
+#b2{
+    height:60px; 
+    width:120px; 
+    margin: -100px 230px; 
+    float:right;
+    top:50%; 
+    left:20%;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 3px;
 }

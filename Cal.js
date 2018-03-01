@@ -5,28 +5,37 @@ $("#b1").on("click", function(){
 	for(i=0; i<3 ; i++){
 		if (i === 0){
 		  var veg = prompt("Are you a Vegetarian? 'Yes' or 'No' ")
+		  input.push(veg)
 		}
 		if (i === 1){
 		  var hev = prompt("'heavy' or 'light' Meal ?")
+		  input.push(hev)
 		}
 		if (i === 1){
 		  var timeFrame = prompt("What Meal_time is it? 'Breakfast', 'Lunch', 'Dinner'")
+		  input.push(timeFrame)
 		}
-	input.push(veg)
-	input.push(hev)
-	input.push(timeFrame)
 	}
+	return select();
 });
+
+
 
 function select(){
 	var me = ""
+	var you=""
 	for(i=0; i<library.length ; i++){
+
 	  		if( library[i].vegeterianOrNot.toLowerCase() === input[0].toLowerCase() && library[i].heavyOrLight.toLowerCase() === input[1].toLowerCase() && library[i].time.toLowerCase() === input[2].toLowerCase()){
-	  			 me = me + library[i].name + ", " + library[i].recipe
+	  			 me= library[i].name 
+	  			 you=  library[i].recipe
 	  		} 		   
-	}input = []
-	$("h1").text(me[0])
-	$("p").text(me[1])
+	}
+	input = []
+	$("h4").text("Your Recipe")
+	$("h2").text(me)
+	$("#result").text(you)
+	return ;
 }
 
 var library=[{
@@ -148,57 +157,6 @@ function addRecipe(name, time, vegeterianOrNot, heavyOrLight ,imgAddress, recipe
 
 
 
-
-
-
-
-
-
-
-
-
-function dish(){
-
-	for(var i=0; i < library.length;i++){
-		if( liprary[i]vegeterianOrNot.toLowerCase() === input[0] && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "breakfast"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "yes" && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "lunch"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "yes" && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "dinner"){
-			return 
-		} 
-		if( vegeterianOrNot.toLowerCase() === "yes" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "breakfast"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "yes" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "lunch"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "yes" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "dinner"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "breakfast"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "lunch"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "heavy" && time.toLowerCase() === "dinner"){
-			return 
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "breakfast"){
-			return
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "lunch"){
-			return
-		}
-		if( vegeterianOrNot.toLowerCase() === "no" && heavyOrLight.toLowerCase() === "light" && time.toLowerCase() === "dinner"){
-			return
-		}
-			
-	}
-}	
 
 
 

@@ -63,7 +63,7 @@ var library=[{
 	recipe: "Egyption Fooool Mudamas, Lemmon, Tomato, garlic, egg, mix all ingrediants togather and wallaaaaaa"
 	},
 	{
-	name: "lighto vega la fasto",
+	name: "LIGHTO VEGA LA FASTO",
 	time: "breakfast",
 	vegeterianOrNot: "yes",
 	heavyOrLight: "light",
@@ -71,7 +71,7 @@ var library=[{
 	recipe: "its nothing important, just bring a dark loaf bread and put some honey inside, and you will dance flamingo like a BOSS"
 	},
 	{
-	name: "Tabooleh with japaneese rice",
+	name: "TABOOLEH WITH JAPANEESE RICE",
 	time: "lunch",
 	vegeterianOrNot: "yes",
 	heavyOrLight: "light",
@@ -87,55 +87,96 @@ var library=[{
 	recipe: "Hommos, Mutabal, dark bread. Put some olive oil on both Hommos and Mutabal and start eating like a BOSS."
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "HOTDOGS",
+	time: "breakfast",
+	vegeterianOrNot: "no",
+	heavyOrLight: "heavy",
 	imgAddress: "",
-	recipe: ""
+	recipe: "Hotdog is a very famous dish, you can buy one from any resturant around you, or just google it."
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "MANSAF",
+	time: "lunch",
+	vegeterianOrNot: "no",
+	heavyOrLight: "heavy",
 	imgAddress: "",
-	recipe: ""
+	recipe: "If you were in Jordan, and it was Friday, knock any door and ask them if you can share MANSAF with them."
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "KUBBA WITH FRENCH-FRIES",
+	time: "dinner",
+	vegeterianOrNot: "no",
+	heavyOrLight: "heavy",
 	imgAddress: "",
-	recipe: ""
+	recipe: "Go to any mall, buy Nabeel KUBBA and follow the instruction on the bag."
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "EGGS WITH ORANGE JUICE",
+	time: "breakfast",
+	vegeterianOrNot: "no",
+	heavyOrLight: "light",
 	imgAddress: "",
-	recipe: ""
+	recipe: "When you wake up just wash your face, dont't brush your teeth, go directly to the kitchen, boil an egg, prepare a loaf of bread, prepare the juice. Eat them then brush your teeth. PS: belive me you will help humanity"
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "ITADAKIMASU FISH",
+	time: "lunch",
+	vegeterianOrNot: "no",
+	heavyOrLight: "light",
 	imgAddress: "",
-	recipe: ""
+	recipe: "Go to the same mall, insted of buying from Nabeel, buy a fish, google how to cook it, follow the instructions and give it to the neighbours."
 	},
 	{
-	name: "",
-	time: "",
-	vegeterianOrNot: "",
-	heavyOrLight: "",
+	name: "SHEEP OF HOMOS",
+	time: "dinner",
+	vegeterianOrNot: "no",
+	heavyOrLight: "light",
 	imgAddress: "",
-	recipe: ""
+	recipe: "It's not cheap, it has alot of choped sheeps meat with spices, put it on HOMOS and have fun, when you finish say: 'GOD BLESS THAT SHEEP'."
 	},
 
 ];
+
+
+$("#b2").on("click", function(){
+
+	var res='';
+
+	for(i=0; i<5 ; i++){
+		if (i === 0){
+		  var name = prompt("What is the Name of this meal?")
+		  res= res+ name + ", "
+		  
+		}
+		if (i === 1){
+		  var time = prompt("When do you eat it? 'Breakfast', 'Lunch', 'Dinner'")
+		  res= res+ time + ", "
+		}
+		if (i === 2){
+		  var vegeterianOrNot = prompt("Is it a vegetarian meal? 'Yes' or 'No' ")
+		  res= res+ vegeterianOrNot + ", "
+		}
+		if (i === 3){
+		  var heavyOrLight= prompt("Is it a 'heavy' or a 'light' Meal ?") 
+		  res= res+ heavyOrLight + ", "
+		}
+		if (i === 4){
+		  var recipe= prompt("What is the recipe?") 
+		  res= res+ recipe;
+		  		return alert("Thanks!!!")
+
+		}
+
+	}
+
+return addRecipe();
+});
+
+
+
+
+
+
 
 function addRecipe(name, time, vegeterianOrNot, heavyOrLight ,imgAddress, recipe){
 	library.push({

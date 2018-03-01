@@ -191,7 +191,9 @@ function addRecipe(name, time, vegeterianOrNot, heavyOrLight ,imgAddress, recipe
 }
 	
 
-
+$("#n").on('click', function(){
+	alert("Contact us \n E-mail: RBK@Foody.com \n phone-number: 0707070701 \n address: RBK headquarter, Khalda, Amman, Germany")
+})
 
 
 

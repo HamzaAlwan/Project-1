@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right, #ece9e6, #ffffff);
+    background: linear-gradient(to top, #c9d6ff, #e2e2e2);
 }
 
 img {
@@ -13,10 +13,14 @@ img {
     border-radius: 5%
 }
 
+button {
+    font-family: Nova Flat;
+}
+
 nav {
 
-                background: linear-gradient(to right, #56ab2f, #a8e063);
-                border-radius: 6px !important;
+    background: linear-gradient(to right, #56ab2f, #a8e063);
+    border-radius: 5px !important;
 }
 
 #s {
@@ -30,13 +34,14 @@ p {
 }   
 
 h2 {
-    color: #6f0000;
-    font-family: lobester;
-    font-style: italic;
+    color: #B50000;
+    font-family: Merienda;
 }
 
 h4 {
     font-weight: bold;
+    font-family: Abel;
+    font-size: 24px;
 }
 
 #result {
@@ -50,47 +55,56 @@ h4 {
 
 
 span {
-    color: #A00000;
+    color: #CA0000;
 }
 
 #nF {
-    font-family: Merienda;
-    font-size: 30px;
+    font-family: Nova Flat;
+    font-size: 36px;
     color : #0003D8;
 
+}
+
+#plus {
+    color : #7F03B9;
+}
+#search {
+    color: #D80000;
 }
 
 #b1{
 
     border: 1px solid;
     border-radius: 55px;
-
-    height:100px; 
-    width:120px; 
-    margin: -30px -50px; 
+    height:90px; 
+    width:156px; 
+    margin: -30px -80px; 
     position:relative;
     top:50%; 
     left:50%;
 }
 
 #b2{
-    height:60px; 
-    width:120px; 
+    height:70px; 
+    width:120px;
+    border-radius: 10px; 
     margin: -100px 160px; 
     float:right;
     top:50%; 
     left:20%;
 }
 
-hr { 
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 3px;
-}
+hr.hr { 
+  display: block; 
+  content: ""; 
+  height: 35px; 
+  margin-top: 10px; 
+  border-style: solid; 
+  border-color: #999999; 
+  border-width: 5px 0 0 0; 
+  border-radius: 20px;
+} 
+
 #US {
     position: relative;
     float: left;
@@ -102,3 +116,13 @@ hr {
     border-radius: 5%
 }
 
+#R1 {
+    font-family: Alegreya Sans SC;
+    font-size: 21px;
+    color: black;
+}
+#R2 {
+    font-family: Alegreya Sans SC;
+    font-size: 21px;
+    color: black;
+}

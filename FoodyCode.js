@@ -5,15 +5,21 @@ $("#b1").on("click", function(){
 	for(i=0; i<3 ; i++){
 		if (i === 0){
 		  var veg = prompt("Are you a Vegetarian? 'Yes' or 'No' ")
-		  input.push(veg)
+		  if (veg.toLowerCase() === "yes" || veg.toLowerCase() === "no"){
+		  	input.push(veg)
+		  } else { i = i - 1 }
 		}
 		if (i === 1){
 		  var hev = prompt("'heavy' or 'light' Meal ?")
-		  input.push(hev)
+		  if (hev.toLowerCase() === "heavy" || hev.toLowerCase() === "light"){
+		  	input.push(hev)
+		  } else {i = i - 1}
 		}
-		if (i === 1){
+		if (i === 2){
 		  var timeFrame = prompt("What Meal_time is it? 'Breakfast', 'Lunch', 'Dinner'")
-		  input.push(timeFrame)
+		  if (timeFrame.toLowerCase() === "breakfast" || timeFrame.toLowerCase() === "lunch" || timeFrame.toLowerCase() === "dinner"){
+		  	input.push(timeFrame)
+		  } else {i = i - 1}	  
 		}
 	}
 	return select();
@@ -22,19 +28,27 @@ $("#b1").on("click", function(){
 
 
 function select(){
-	var me = ""
-	var you=""
+	var dish1 = ""
+	var recipe1 = ""
+	var dish2 = ""
+	var recipe2 = ""
 	for(i=0; i<library.length ; i++){
 
 	  		if( library[i].vegeterianOrNot.toLowerCase() === input[0].toLowerCase() && library[i].heavyOrLight.toLowerCase() === input[1].toLowerCase() && library[i].time.toLowerCase() === input[2].toLowerCase()){
-	  			 me= library[i].name 
-	  			 you=  library[i].recipe
+	  			 if (dish1.length === 0){
+	  			 dish1 = library[i].name 
+	  			 recipe1 =  library[i].recipe
+	  			 } else { dish2 = library[i].name
+	  			 	recipe2 = library[i].recipe
+	  			 } 
 	  		} 		   
 	}
 	input = []
-	$("h4").text("Your Recipe")
-	$("h2").text(me)
-	$("#result").text(you)
+	$("h4").text("Your Recipe :")
+	$("#D1").text(dish1.toUpperCase())
+	$("#R1").text(recipe1)
+	$("#D2").text(dish2.toUpperCase())
+	$("#R2").text(recipe2)
 	return ;
 }
 
@@ -43,7 +57,7 @@ var library=[{
 	time: "breakfast",
 	vegeterianOrNot: "yes",
 	heavyOrLight: "heavy",
-	imgAddress: $,
+	imgAddress: "",
 	recipe: "Hommos, Mutabal, French bread. Put some olive oil on both Hommos and Mutabal and start eating like a BOSS. "
 	},
 	{
@@ -59,7 +73,7 @@ var library=[{
 	time: "dinner",
 	vegeterianOrNot: "yes", 
 	heavyOrLight: "heavy",
-	imgAddress: $,
+	imgAddress: "",
 	recipe: "Egyption Fooool Mudamas, Lemmon, Tomato, garlic, egg, mix all ingrediants togather and wallaaaaaa"
 	},
 	{
@@ -144,32 +158,25 @@ $("#b2").on("click", function(){
 
 	for(i=0; i<5 ; i++){
 		if (i === 0){
-		  var name = prompt("What is the Name of this meal?")
-		  res= res+ name + ", "
-		  
+		  var name = prompt("What is the Name of this meal?") 
 		}
 		if (i === 1){
 		  var time = prompt("When do you eat it? 'Breakfast', 'Lunch', 'Dinner'")
-		  res= res+ time + ", "
 		}
 		if (i === 2){
 		  var vegeterianOrNot = prompt("Is it a vegetarian meal? 'Yes' or 'No' ")
-		  res= res+ vegeterianOrNot + ", "
 		}
 		if (i === 3){
 		  var heavyOrLight= prompt("Is it a 'heavy' or a 'light' Meal ?") 
-		  res= res+ heavyOrLight + ", "
 		}
 		if (i === 4){
 		  var recipe= prompt("What is the recipe?") 
-		  res= res+ recipe;
-		  		return alert("Thanks!!!")
+		  	alert("Thanks!!!")
 
 		}
 
 	}
-
-return addRecipe();
+return addRecipe(name, time, vegeterianOrNot, heavyOrLight, recipe);
 });
 
 
@@ -178,13 +185,12 @@ return addRecipe();
 
 
 
-function addRecipe(name, time, vegeterianOrNot, heavyOrLight ,imgAddress, recipe){
+function addRecipe(name, time, vegeterianOrNot, heavyOrLight, recipe){
 	library.push({
  		name : name,
 		time : time,
 		vegeterianOrNot : vegeterianOrNot,
 		heavyOrLight : heavyOrLight,
-		imgAddress : imgAddress,
 		recipe : recipe
  	});
  	return "done!";
@@ -192,7 +198,7 @@ function addRecipe(name, time, vegeterianOrNot, heavyOrLight ,imgAddress, recipe
 	
 
 $("#n").on('click', function(){
-	alert("Contact us \n E-mail: RBK@Foody.com \n Phone-Number: 0788839964 \n Address: Jordan, Amman, Khalda, RBK Headquarter")
+	alert("Contact us \n E-mail : RBK@Foody.com \n Phone-Number : 0788839964 \n Address : Jordan,  Amman,  Khalda,  RBK Headquarter.")
 })
 
 

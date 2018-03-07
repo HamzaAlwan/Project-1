@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>s
+  <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="Style.css" type="text/css" rel="stylesheet">
@@ -8,19 +12,19 @@
   <link rel="shortcut icon" href="foody-logo.ico">
 	<title>Foody</title>
 
-	<nav class="navbar navbar-fixed-top">
+	<nav class="navbar navbar-fixed-top container-fluid">
   <div class="container-fluid">
     <div class="navbar-header">
       <button id = "b0" type="button" class="navbar-toggle btn btn-info glyphicon glyphicon-chevron-down" data-toggle="collapse" data-target="#myNavbar">    
       </button>
-      <a style="font-size: 25px" id = "s" class="navbar-brand text-center" href="#"><span class= "glyphicon glyphicon-cutlery"></span><span id = "nF"> Foody</span></a>
+      <a style="font-size: 27px" id = "s" class="navbar-brand text-center" href="#"><span class= "glyphicon glyphicon-cutlery"></span><span id = "nF"> Foody®</span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="scrollable" href="AboutUs.html"><span class="glyphicon glyphicon-pencil"></span> About Us</a></li>
+        <li style="font-size: 18px"><a class="scrollable" href="AboutUs.html"><span class="glyphicon glyphicon-pencil"></span> About Us</a></li>
         <li class="dropdown">
         </li>
-        <li><a id="n" class="scrollable" href="#Contact"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
+        <li style="font-size: 18px"><a id="n" class="scrollable" href="#Contact"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
       </ul>
     </div>
   </div>
@@ -30,27 +34,32 @@
 </head>
 <body class="container-fluid well" >
   <div>
-<button id = "b1" class="btn btn-default btn-info"> Find Your Dish ! </button>
+<button id = "b1" class="btn btn-default btn-info"><span id = "search" class = "glyphicon glyphicon-search"> </span>  Find Your Dish ! </button>
 
- </div><br><br>
+ </div><br><br><br>
  
  <div class= "row" >
   <img class = "col-lg-4" src="http://www.threebearstheory.com/wp-content/uploads/2013/06/studiotbt_iamhungry_logo_cycle-xl.gif" alt="hungry-kid">
   <img class = "col-lg-4" src="https://cdn.shopify.com/s/files/1/0590/4405/t/5/assets/logo.png?8112430740257431546" alt="Foody-logo"><br>
-  <p style = "color: #336600" class = "col-lg-4 text-center">Welcome,<p style = "color: #336600" class = "col-lg-4 text-center">Foody is your friend, that can provide you with recipies that suits your diet.<p style = "color: #336600" class = "text-center">you can start by clicking on "Find Your Dish" and Foody will ask you some questions that can help it to find best recipies for you. <p style = "color: #336600" class = "col-lg-4 text-center">if you want to search manualy; Our web-site provides to you one of the biggest libraries of recipies around the wrold.</p></p></p></div><br>
+
+  <p style = "color: #336600" class = "col-lg-4 text-center">Welcome <p style = "color: #336600" class = "col-lg-4 text-center">Foody is your friend, that can provide you with recipies that suits your diet.<p style = "color: #336600" class = "text-center">you can start by clicking on "Find Your Dish" and Foody will ask you some questions that can help it to find best recipies for you. <p style = "color: #336600" class = "col-lg-4 text-center">if you want to search manualy; Our web-site provides to you one of the biggest libraries of recipies around the wrold.</p></p></p></div><br>
 
   <div class= "row" >
-  <img class = "col-lg-4" src="https://tag-restaurant.com/wp-content/uploads/2014/12/tag-social-food-and-environment-11.jpg" alt="Natcho">
+  <img class = "col-lg-4" src="https://media1.popsugar-assets.com/files/thumbor/skXhVZY3ujvd0J_ZL9y8j2c2LbE/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/09/26/754/n/1922729/tmp_aMIwUV_dd448133b5b8e894_PS16_Food_BRoll_2395_1_.jpg" alt="How to">
   <img class = "col-lg-4" src="http://zipotesrestaurant.com/images-mexican-salvadorean-restaurant-redwood_city/slides/zipotes_mexican_salvadorean_72.jpg" alt="Fish-with-Rice"><br><br>
   <p style = "color: #336600" class = "col-lg-4 text-center">Foody is not just a friend who just helps, Foody also like to get help from anyone who has good recipies. if you have some, You can press on "Add Recipe" and Foody will take all the important information, to save it after it get reviewed by our master chefs.</p></div><br><br>
+  <div class="container-fluid">
+   <button id = "b2" class="btn btn-default btn-warning"><span id = "plus" class = "glyphicon glyphicon-plus"></span> Add Recipe </button>
+</div>
 
-   <button id = "b2" class="btn btn-default btn-warning"> Add Recipe </button>
+  <hr class="hr">
 
-<div id="searchResult">
-  <hr>
-  <h4 style="color: gray "></h4>
- <h2></h2> 
-<p id="result"></p> 
+<div id="searchResult" class="container-fluid">
+  <h4 style="color: #838383"></h4>
+ <h2 id ="D1"></h2> 
+<p id="R1"></p> 
+<h2 id ="D2"></h2> 
+<p id="R2"></p> 
 </div> 
 
 

@@ -162,12 +162,21 @@ $("#b2").on("click", function(){
 		}
 		if (i === 1){
 		  var time = prompt("When do you eat it? 'Breakfast', 'Lunch', 'Dinner'")
+		  if (time.toLowerCase() === "breakfast" || time.toLowerCase() === "lunch" || time.toLowerCase() === "dinner"){
+		  	i = i 
+		  } else { i = i - 1}
 		}
 		if (i === 2){
 		  var vegeterianOrNot = prompt("Is it a vegetarian meal? 'Yes' or 'No' ")
+		  if (vegeterianOrNot.toLowerCase() === "yes" || vegeterianOrNot.toLowerCase() === "no"){
+		  	i = i
+		  } else { i = i - 1}
 		}
 		if (i === 3){
 		  var heavyOrLight= prompt("Is it a 'heavy' or a 'light' Meal ?") 
+		  if (heavyOrLight.toLowerCase() === "heavy" || heavyOrLight.toLowerCase() === "light"){
+		  	i = i
+		  } else { i = i - 1}
 		}
 		if (i === 4){
 		  var recipe= prompt("What is the recipe?") 
